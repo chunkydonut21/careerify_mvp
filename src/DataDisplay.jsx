@@ -19,6 +19,7 @@ export const DataDisplay = () => {
 
   // Function to clean up the skill strings
   const cleanSkill = (skill) => {
+    // eslint-disable-next-line no-useless-escape
     return skill.replace(/[\[\]']/g, "").trim(); // Remove brackets and single quotes
   };
   return (

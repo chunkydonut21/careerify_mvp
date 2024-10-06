@@ -17,6 +17,10 @@ export const DataDisplay = () => {
     );
   }
 
+  // Function to clean up the skill strings
+  const cleanSkill = (skill) => {
+    return skill.replace(/[\[\]']/g, "").trim(); // Remove brackets and single quotes
+  };
   return (
     <Container style={{ paddingTop: 10, paddingBottom: 20 }}>
       <Card elevation={3} style={{ padding: "20px", borderRadius: "15px" }}>
@@ -66,7 +70,7 @@ export const DataDisplay = () => {
                   ? profile.clean_skills
                   : profile.clean_skills?.split(",") || []
                 ).map((skill, index) => (
-                  <Chip key={index} label={skill.trim()} variant="outlined" color="primary" sx={{ m: 2 }} />
+                  <Chip key={index} label={cleanSkill(skill)} variant="outlined" color="primary" sx={{ m: 2 }} />
                 ))}
               </Stack>
             </CardContent>

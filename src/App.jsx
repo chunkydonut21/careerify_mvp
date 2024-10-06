@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import { SearchForm } from "./SearchForm";
 import { DataDisplay } from "./DataDisplay";
 
